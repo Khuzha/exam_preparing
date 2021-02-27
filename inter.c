@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <unistd.h>
 
 int	includes(char *str, char c)
