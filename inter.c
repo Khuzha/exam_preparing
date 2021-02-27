@@ -25,19 +25,19 @@ int	includes_lim(char *str, char c, size_t pos)
 	return (0);
 }
 
-
-int	main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	size_t	i;
 
 	i = 0;
 	if (argc != 3)
-		return ((int) write(1, "\n", 1));
+		return ((int)write(1, "\n", 1));
 	if (!argv[1] || !argv[2])
 		return (-1);
 	while (argv[1][i] && argv[2][i])
 	{
-		if (includes(argv[2], argv[1][i]) && !includes_lim(argv[1], argv[1][i], i))
+		if (includes(argv[2], argv[1][i]) &&
+			!includes_lim(argv[1], argv[1][i], i))
 			write(1, &argv[1][i], 1);
 		i++;
 	}
