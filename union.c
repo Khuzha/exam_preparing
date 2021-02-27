@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int	includes(char *str, char c)
+int		includes(char *str, char c)
 {
 	while (str && *str)
 	{
@@ -11,7 +11,7 @@ int	includes(char *str, char c)
 	return (0);
 }
 
-int	includes_lim(char *str, char c, size_t pos)
+int		includes_lim(char *str, char c, size_t pos)
 {
 	size_t	i;
 
@@ -38,13 +38,13 @@ void	iterate_str(char *str1, char *str2)
 	}
 }
 
-int	main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	size_t	i;
 
 	i = 0;
 	if (argc != 3)
-		return ((int) write(1, "\n", 1));
+		return ((int)write(1, "\n", 1));
 	if (!argv[1] || !argv[2])
 		return (-1);
 	iterate_str(argv[1], argv[2]);
