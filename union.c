@@ -42,11 +42,9 @@ int	main(int argc, char **argv)
 	{
 		while (argv[i][j])
 		{
-			// printf("arr = %s, curchar = %c, includes = %d\n", arr, argv[i][j], includes(arr, argv[i][j]));
 			if (!includes(arr, argv[i][j]))
 			{
 				arr[ft_strlen(arr)] = argv[i][j];
-				// printf("pos = %d\n", (int)(ft_strlen(arr)));
 				write(1, &argv[i][j], 1);
 			}
 			j++;
