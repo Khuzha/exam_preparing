@@ -1,7 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <stdio.h>
 
 int	get_next_line(char **line)
 {
@@ -34,11 +33,4 @@ int	get_next_line(char **line)
 	}
 	*line = str;
 	return (0);
-}
-
-int main()
-{
-	char *s;
-	get_next_line(&s);
-	printf("result = %s\n", s);
 }
